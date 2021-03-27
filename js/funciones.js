@@ -88,17 +88,18 @@ function agregar(nombre, productosJson, tamanio, codigo,stock,precio) {
   
   if(!existeEnCarrito(codigo,tamanio)){
     let productoItem = new Item(nombre,1,tamanio,productosJson,codigo,stock, precio)
-    //console.log(productoItem)
     arrayCarrito.push(productoItem)
   }
   $('.agregarAlCarrito').text("")
   for(let k =0 ; k<arrayCarrito.length; k++){
-    //console.log(arrayCarrito[k].codigo + " "+arrayCarrito[k].tamanio + " k:"+ k)
-    let id = arrayCarrito[k].codigo + arrayCarrito[k].tamanio
-    
-    $(".agregarAlCarrito").append('<p style = "color:green;" id = ' + id + '></p>') 
-    //console.log(arrayCarrito[k].precio)
-    $("#" + id).text(arrayCarrito[k].cantidad + "  "+ arrayCarrito[k].nombre+"  "+ " x "+ arrayCarrito[k].tamanio+"ml "+" $"+ arrayCarrito[k].precio*arrayCarrito[k].cantidad)
+    const id = arrayCarrito[k].codigo + arrayCarrito[k].tamanio
+    const caja = d.querySelector(".agregarAlCarrito")
+    const nodoP = d.createElement("p")
+    const texto = d.createTextNode(`${arrayCarrito[k].cantidad} -- ${arrayCarrito[k].nombre} x ${arrayCarrito[k].tamanio } ml  --> $ ${arrayCarrito[k].precio*arrayCarrito[k].cantidad}`)
+    nodoP.setAttribute("style", "color:green;")
+    nodoP.setAttribute("id", id)
+    nodoP.appendChild(texto)
+    caja.appendChild(nodoP)
   }
   localStorage.setItem('elCarrito', JSON.stringify(arrayCarrito))// quiero hacer una f(x) que recupere el carrito si se cerro el navegador/ para recuperarlo tengo que hacer JSON.parse(arrayCarrito)
 }
@@ -130,12 +131,21 @@ function total(){
 }
 
 function eliminarCarrito(){//no anda
-  arrayCarrito = []
-  console.log(arrayCarrito)
-  let caja = $('#agregarAlCarrito');
+  //
+ let caja = $('#agregarAlCarrito')
+  console.log(caja)
+  
     while (caja.firstChild){
+      console.log(caja.firstChild)
           caja.removeChild(caja.firstChild);
+          console.log(caja.firstChild)
       }
+
+  // for(let i = 0;i<arrayCarrito.length;i++){
+  //   //caja.removeChild(caja.firstChild)
+  //   console.log(arrayCarrito[i])}
+  arrayCarrito.length=0
+  
   localStorage.clear()
 }
 function darkMode(e, btn, classDark){
