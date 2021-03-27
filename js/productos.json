@@ -1,0 +1,299 @@
+
+{ "productosJson" :
+  [{
+        "id": 1,
+        "marca": "Carolina Herrera",
+        "nombre": "Good-Girl",
+        "presentacion": [
+          {
+            "tamanio": 100,
+            "precio":10800,
+            "codigo":7798656800,
+            "stock": 1
+          },
+          {
+            "tamanio": 80,
+            "precio":9800,
+            "codigo":7798656801,
+            "stock": 1
+          },
+          {
+            "tamanio": 50,
+            "precio":7800,
+            "codigo":7798656802,
+            "stock": 1
+          }
+        ],
+        "foto": "multimedia/goodGirlCH.jpg",
+        "descripcion":"Notas de Salida son almendra, café, bergamota y limón. Notas de Corazón son nardos, jazmín sambac (sampaguita), raíz de lirio, flor de azahar del naranjo y rosa de Bulgaria (rosa Damascena de Bulgaria).Notas de Fondo son haba tonka, cacao, vainilla, praliné, sándalo, ámbar, almizcle, madera de cachemira, pachulí, canela y cedro."
+        },
+        {
+          "id":2,
+          "marca": "Ralph Lauren",
+          "nombre": "Ralph",
+          "presentacion": [
+            {
+              "tamanio": 80,
+              "precio":9800,
+              "codigo":7798656810,
+              "stock": 1
+            },
+            {
+              "tamanio": 50,
+              "precio":9000,
+              "codigo":7798656811,
+              "stock": 1
+            }
+          ],
+          "foto": "multimedia/ralphLaurenEDTMujer.jpg",
+          "descripcion":"Notas de Salida son almendra, café, bergamota y limón. Notas de Corazón son nardos, jazmín sambac (sampaguita), raíz de lirio, flor de azahar del naranjo y rosa de Bulgaria (rosa Damascena de Bulgaria).Notas de Fondo son haba tonka, cacao, vainilla, praliné, sándalo, ámbar, almizcle, madera de cachemira, pachulí, canela y cedro."
+        },
+        {
+          "id":3,
+          "marca": "Paco Rabanne",
+          "nombre": "Black-XS",
+          "presentacion": [
+            {
+              "tamanio": 80,
+              "precio":9600,
+              "codigo":7798656820,
+              "stock": 1
+            },
+            {
+              "tamanio": 50,
+              "precio":8700,
+              "codigo":7798656821,
+              "stock": 1
+            }
+          ],
+          "foto": "multimedia/pacoRBlackXSMujer.png",
+          "descripcion":"Notas de Salida son almendra, café, bergamota y limón. Notas de Corazón son nardos, jazmín sambac (sampaguita), raíz de lirio, flor de azahar del naranjo y rosa de Bulgaria (rosa Damascena de Bulgaria).Notas de Fondo son haba tonka, cacao, vainilla, praliné, sándalo, ámbar, almizcle, madera de cachemira, pachulí, canela y cedro."
+        },
+          
+        {
+          "id":4,
+          "marca": "Lancome",
+          "nombre": "Idole",
+          "presentacion": [
+            {
+              "tamanio": 75,
+              "precio":14600,
+              "codigo":7798656830,
+              "stock": 1
+            },
+            {
+              "tamanio": 50,
+              "precio":10700,
+              "codigo":7798656831,
+              "stock": 1
+            },
+            {
+              "tamanio": 25,
+              "precio":9900,
+              "codigo":7798656832,
+              "stock": 1
+            }
+          ],        
+          "foto": "multimedia/idole.jpg",
+          "descripcion":"Notas de Salida son almendra, café, bergamota y limón. Notas de Corazón son nardos, jazmín sambac (sampaguita), raíz de lirio, flor de azahar del naranjo y rosa de Bulgaria (rosa Damascena de Bulgaria).Notas de Fondo son haba tonka, cacao, vainilla, praliné, sándalo, ámbar, almizcle, madera de cachemira, pachulí, canela y cedro."
+      },   
+        {
+          "id":5,
+          "marca": "Yves Saint Laurent",
+          "nombre": "Opium-Black",
+          "presentacion": [
+            {
+              "tamanio": 100,
+              "precio":11600,
+              "codigo":7798656840,
+              "stock": 1
+            },
+            {
+              "tamanio": 80,
+              "precio":10000,
+              "codigo":7798656841,
+              "stock": 1
+            },
+            {
+              "tamanio": 50,
+              "precio":9900,
+              "codigo":7798656842,
+              "stock": 1
+            }
+          ],
+          "foto": "multimedia/BlackOpiumYvesSLMujer.jpg",
+          "descripcion":"Notas de Salida son almendra, café, bergamota y limón. Notas de Corazón son nardos, jazmín sambac (sampaguita), raíz de lirio, flor de azahar del naranjo y rosa de Bulgaria (rosa Damascena de Bulgaria).Notas de Fondo son haba tonka, cacao, vainilla, praliné, sándalo, ámbar, almizcle, madera de cachemira, pachulí, canela y cedro."
+        },
+        {
+          "id":6,
+          "marca": "Nina-Ricci",
+          "nombre": "Ruge",
+          "presentacion": [
+            {
+              "tamanio": 80,
+              "precio":11600,
+              "codigo": 7798656850,
+              "stock": 1
+            },
+            {
+              "tamanio": 50,
+              "precio":10100,
+              "codigo":7798656851,
+              "stock": 1
+            },
+            {
+              "tamanio": 30,
+              "precio":9900,
+              "codigo":7798656852,
+              "stock": 1
+            }
+          ],
+          "foto": "multimedia/ninaRougeMujer.png",
+          "descripcion":"Notas de Salida son almendra, café, bergamota y limón. Notas de Corazón son nardos, jazmín sambac (sampaguita), raíz de lirio, flor de azahar del naranjo y rosa de Bulgaria (rosa Damascena de Bulgaria).Notas de Fondo son haba tonka, cacao, vainilla, praliné, sándalo, ámbar, almizcle, madera de cachemira, pachulí, canela y cedro."
+        },
+          {
+            "id":7,
+            "marca": "Cacharel",
+            "nombre": "Anais-Anais",
+            "presentacion": [
+              {
+                "tamanio": 50,
+                "precio":9200,
+                "codigo":7798656860,
+                "stock": 1
+              },
+              {
+                "tamanio": 30,
+                "precio":7700,
+                "codigo":7798656861,
+                "stock": 1
+              }
+            ],
+            "foto": "multimedia/AnaisAnaisCacha.png",
+            "descripcion":"Notas de Salida son almendra, café, bergamota y limón. Notas de Corazón son nardos, jazmín sambac (sampaguita), raíz de lirio, flor de azahar del naranjo y rosa de Bulgaria (rosa Damascena de Bulgaria).Notas de Fondo son haba tonka, cacao, vainilla, praliné, sándalo, ámbar, almizcle, madera de cachemira, pachulí, canela y cedro."
+         },
+        {
+          "id":8,
+          "marca": "Calvin Klein",
+          "nombre": "Eternity",
+          "presentacion": [
+            {
+              "tamanio": 120,
+              "precio":10600,
+              "codigo":7798656870,
+              "stock": 1
+            },
+            {
+              "tamanio": 75,
+              "precio":9700,
+              "codigo":7798656871,
+              "stock": 1
+            },
+            {
+              "tamanio": 50,
+              "precio":8500,
+              "codigo":7798656872,
+              "stock": 1
+            }
+          ],
+          "foto": "multimedia/calvinKleinEternMujer.png",
+          "descripcion":"Notas de Salida son almendra, café, bergamota y limón. Notas de Corazón son nardos, jazmín sambac (sampaguita), raíz de lirio, flor de azahar del naranjo y rosa de Bulgaria (rosa Damascena de Bulgaria).Notas de Fondo son haba tonka, cacao, vainilla, praliné, sándalo, ámbar, almizcle, madera de cachemira, pachulí, canela y cedro."
+          },
+        {
+          "id":9,
+          "marca": "Tommy Hilfiger",
+          "nombre": "Tommy-Girl",
+          "presentacion": [
+            {
+              "tamanio": 100,
+              "precio":11200,
+              "codigo":7798656880,
+              "stock": 1
+            },
+            {
+              "tamanio": 75,
+              "precio":10600,
+              "codigo":7798656881,
+              "stock": 1
+            },
+            {
+              "tamanio": 50,
+              "precio":9300,
+              "codigo":7798656882,
+              "stock": 1
+            }
+          ],
+          "foto": "multimedia/tommyGirl.png",
+          "descripcion":"Notas de Salida son almendra, café, bergamota y limón. Notas de Corazón son nardos, jazmín sambac (sampaguita), raíz de lirio, flor de azahar del naranjo y rosa de Bulgaria (rosa Damascena de Bulgaria).Notas de Fondo son haba tonka, cacao, vainilla, praliné, sándalo, ámbar, almizcle, madera de cachemira, pachulí, canela y cedro."
+        },
+        {
+          "id":10,
+          "marca": "Givenchy",
+          "nombre": "L´interdit",
+          "presentacion": [
+            {
+              "tamanio": 50,
+              "precio":10700,
+              "codigo":7798656890,
+              "stock": 1
+            },
+            {
+              "tamanio": 30,
+              "precio":9100,
+              "codigo":7798656891,
+              "stock": 1
+            }
+          ],
+          "foto": "multimedia/linterditGivenchyMujer.png",
+          "descripcion":"Notas de Salida son almendra, café, bergamota y limón. Notas de Corazón son nardos, jazmín sambac (sampaguita), raíz de lirio, flor de azahar del naranjo y rosa de Bulgaria (rosa Damascena de Bulgaria).Notas de Fondo son haba tonka, cacao, vainilla, praliné, sándalo, ámbar, almizcle, madera de cachemira, pachulí, canela y cedro."
+        },
+        {
+          "id":11,
+        "marca": "Dior",
+        "nombre": "Jador",
+        "presentacion": [
+          {
+            "tamanio": 100,
+            "precio":14600,
+            "codigo":7798656900,
+            "stock": 1
+          },
+          {
+            "tamanio": 50,
+            "precio":10700,
+            "codigo":7798656901,
+            "stock": 1
+          }
+        ],
+        "foto": "multimedia/JadorDior.png",
+        "descripcion":"Notas de Salida son almendra, café, bergamota y limón. Notas de Corazón son nardos, jazmín sambac (sampaguita), raíz de lirio, flor de azahar del naranjo y rosa de Bulgaria (rosa Damascena de Bulgaria).Notas de Fondo son haba tonka, cacao, vainilla, praliné, sándalo, ámbar, almizcle, madera de cachemira, pachulí, canela y cedro."
+        },
+        {
+          "id":12,
+          "marca": "Kenzo",
+          "nombre": "L´eau-Kenzo",
+          "presentacion": [
+            {
+              "tamanio": 75,
+              "precio":10200,
+              "codigo":7798656910,
+              "stock": 1
+            },
+            {
+              "tamanio": 50,
+              "precio":9350,
+              "codigo":7798656911,
+              "stock": 1
+            },
+            {
+              "tamanio": 30,
+              "precio":7920,
+              "codigo":7798656912,
+              "stock": 1
+            }
+          ],
+          "foto": "multimedia/LeauKenzoMujer.png",
+          "descripcion":"Notas de Salida son almendra, café, bergamota y limón. Notas de Corazón son nardos, jazmín sambac (sampaguita), raíz de lirio, flor de azahar del naranjo y rosa de Bulgaria (rosa Damascena de Bulgaria).Notas de Fondo son haba tonka, cacao, vainilla, praliné, sándalo, ámbar, almizcle, madera de cachemira, pachulí, canela y cedro."
+        }
+    ]
+}

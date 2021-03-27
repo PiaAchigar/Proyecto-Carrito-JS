@@ -1,0 +1,58 @@
+.card {
+	/* Add shadows to create the "card" effect */
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	transition: 0.3s;
+	text-align: center;
+	img{
+		width:12vw;
+		margin: auto;
+		padding: 0;
+	}
+	h1{
+		margin: auto;
+	}
+	p{
+		margin: auto;
+	}
+  }
+  
+  /* Mouse hover sombreado */
+  .card:hover {
+	box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
+  }
+  
+  /* padding dentro del container */
+  .container {
+	padding: 2px 16px;
+  }
+  .price {
+	color: grey;
+	font-size: 22px;
+  }
+  
+  .card p button {
+	border: none;
+	outline: 0;
+	padding: 12px;
+	color: white;
+	background-color:rgb(80,191,26);
+	text-align: center;
+	cursor: pointer;
+	width: 100%;
+	font-size: 16px;
+	button:hover { //no funciona
+		background-color:rgb(99,107,112);
+		opacity: 0.7;
+		box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
+		transform: scale(2,1);
+	  }
+	
+  }
+  .caja{
+	display: block; 
+	padding-left: 1vw;
+  }
+  .hoverButton:hover{
+	transform: scale(1.2,1.2);
+  }
+ 

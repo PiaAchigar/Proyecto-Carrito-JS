@@ -1,0 +1,82 @@
+.footer{
+	width: 100vw;
+  }
+  .footer-container{
+	display: grid;
+	grid-template-columns: repeat(2, 2fr);
+  }
+  .redes{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 20px;
+  }
+  .titles{
+	display: grid;
+	grid-template-columns: repeat(2, 2fr);
+  }
+  .img-redes{
+	width: 50px;
+	margin-left: 10px;
+	margin-right: 10px;
+  }
+   .img-redes-t{
+ 	width: 130px;
+	 overflow: hidden;   
+}
+  .contacto{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	margin: 0 auto;
+	font-size: 1rem;
+  }
+  .h3-contacto{
+	font-size: 1rem;
+	margin: 0 auto;
+  }
+  .h3-redes{
+	  font-size: 3rem;
+  }
+  .text-contacto{
+	color: #ccc;
+  }
+  .container-right iframe{
+	width: 95%;
+	text-align: center;
+	margin: auto;
+  }
+  .margen{
+	margin-top: 20px;
+	margin-bottom: 10px;
+  }
+  .container-left .contacto{
+	margin-top: 20%;
+  }
+  .ocultar{
+	display: none;
+  }
+  
+  @media (max-width: 600px){
+	.footer-container{
+	  display: flex;
+	  flex-direction: column;
+	}
+	.titles{
+	  display: none;
+	}
+	.ocultar{
+	  display: block;
+	}
+	.sucursales{
+	  color: #fff;
+	  text-align: center;
+	  font-size: 2rem;
+	  margin-top: 20px;
+	}
+	.container-right iframe{
+	  width: 100%;
+	  text-align: center;
+	  padding: 10px;
+	}
+  }

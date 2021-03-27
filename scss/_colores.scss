@@ -1,0 +1,19 @@
+$color-etiqueta:rgba(10, 153, 74, 0.5);
+$nav-color:rgb(217, 214, 209);
+$main-font: sans-serif;
+$font-size:16px;
+$main-color: #f7df1e;
+$second-color:rgba(2, 2, 2, 0.404);
+
+.etiquetaColor{
+    background-color: $color-etiqueta;
+}
+#fondoDegradeVerde{
+    background-image: linear-gradient(rgb(97,191,26), white);
+}
+#fondoDegradeGris{
+    background-image: linear-gradient(rgb(99,107,112), white);
+}
+#fondoFooter{
+    background-image: linear-gradient(rgb(99,107,112), rgb(173,173,173));
+}

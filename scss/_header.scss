@@ -1,0 +1,97 @@
+@import"_colores.scss";
+.imgMenu{
+	width: 30px;
+	height: 30px;
+	margin: auto auto 5px 20px;
+  }
+  
+header{
+	position: sticky;
+	top: 0px;
+	z-index: 100;
+}
+.subMenuHunko:hover{
+	border-radius: 10px;
+	background-color:  rgba(97, 191, 26, 0.3);
+	
+	}
+
+.ulHunko{
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	li:focus{
+		border:none;
+	}
+}
+
+.fixDropdown{
+	padding: auto;
+	border-radius: 10px;
+	background-color:  rgba(97, 191, 26, 0.3);
+}
+
+
+.titulo{
+	width: 80vw;
+}
+.header{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+   }
+nav{
+	position: sticky;
+	width: 100%;
+}
+/* Muestra el submenu */
+.menu ul li:hover ul{ 
+	display: block;
+	background-color: rgba(10, 153, 74, 0.5);
+	border-radius: 10px;
+	color: black;
+}
+.menu ul li a{
+	color: black;
+	font-weight: 900;
+	font: size 45;
+}
+
+.navegador li:hover {
+	background: rgba(153, 152, 152, 0.5);
+	border-radius: 10px;
+	justify-content: space-around;
+	color: black;
+} 
+.navegador li ul{
+	margin: 10px 0px 5px -8px;
+	padding: 0px 20px 2px 0px;
+}
+
+.dark-mode-btn {
+    /*position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    left: 1vw;*/
+    width: 3rem;
+    height: 3rem;
+	text-decoration: none;
+	border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: $main-color;
+    outline: 0;
+    border: none;
+	border-style: none;
+	border-width: none;
+    transition: all 0.3s ease-out;
+}
+.dark-mode-btn:hover{
+    background-color: $second-color;
+    color: $main-color;
+}
+.dark-mode{
+    background-color: $second-color;
+    columns: $main-color;
+}
