@@ -38,6 +38,7 @@ $('.dark-mode-btn').click(function(e){
   darkMode(e,".dark-mode-btn", "dark-mode")
 })
 $("#carrito-toggle").click(function() {
+  //carritoStorage()
     $("#exampleModal").slideToggle(1500,function(){
 })
 })

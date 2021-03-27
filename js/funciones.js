@@ -82,10 +82,7 @@ function printHtml(Json){
 
 
 function agregar(nombre, productosJson, tamanio, codigo,stock,precio) {
-  if(localStorage.getItem('elCarrito')!== null){
-    arrayCarrito = JSON.parse(localStorage.getItem('elCarrito'))
-     // no supe mostrarlo en el btn del carrito
-  }
+  
   if(!existeEnCarrito(codigo,tamanio)){
     let productoItem = new Item(nombre,1,tamanio,productosJson,codigo,stock, precio)
     arrayCarrito.push(productoItem)
@@ -166,5 +163,20 @@ function darkMode(e, btn, classDark){
  
 
 }
+function carritoStorage(){
+  if(localStorage.getItem('elCarrito')!== null){
+    arrayCarrito = JSON.parse(localStorage.getItem('elCarrito'))
+     // no supe mostrarlo en el btn del carrito
+     for(let k =0 ; k<arrayCarrito.length; k++){
+      const id = arrayCarrito[k].codigo + arrayCarrito[k].tamanio
+      const caja = d.querySelector(".agregarAlCarrito")
+      const nodoP = d.createElement("p")
+      const texto = d.createTextNode(`${arrayCarrito[k].cantidad} -- ${arrayCarrito[k].nombre} x ${arrayCarrito[k].tamanio } ml  --> $ ${arrayCarrito[k].precio*arrayCarrito[k].cantidad}`)
+      nodoP.setAttribute("style", "color:green;")
+      nodoP.setAttribute("id", id)
+      nodoP.appendChild(texto)
+      caja.appendChild(nodoP)
+    }
+  }
 
-
+}
