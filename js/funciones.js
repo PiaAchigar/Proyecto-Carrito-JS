@@ -82,7 +82,10 @@ function printHtml(Json){
 
 
 function agregar(nombre, productosJson, tamanio, codigo,stock,precio) {
-  
+  if(localStorage.getItem('elCarrito')!== null){
+    arrayCarrito = JSON.parse(localStorage.getItem('elCarrito'))
+     // no supe mostrarlo en el btn del carrito
+  }
   if(!existeEnCarrito(codigo,tamanio)){
     let productoItem = new Item(nombre,1,tamanio,productosJson,codigo,stock, precio)
     arrayCarrito.push(productoItem)
