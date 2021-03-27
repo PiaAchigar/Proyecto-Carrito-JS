@@ -8,9 +8,6 @@ function printHtml(Json){
         h3DivTitulo = d.createElement("h3"),
         divPerfumes1 = d.createElement("div")
         
-        //todo Select...https://stackoverflow.com/questions/16676679/javascript-html-object-htmlselectelement/16676714
-        //https://stackoverflow.com/questions/11418384/how-to-get-current-htmlselectelements-id
-        //https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/selectedOptions
         Json.productosJson.forEach((e)=>{
           const divPerfumes2 = d.createElement("div"), 
                 selectTamanioPerfu = d.createElement("select"),
@@ -90,7 +87,7 @@ function agregar(nombre, productosJson, tamanio, codigo,stock,precio) {
     let productoItem = new Item(nombre,1,tamanio,productosJson,codigo,stock, precio)
     arrayCarrito.push(productoItem)
   }
-  $('.agregarAlCarrito').text("")
+  $('.agregarAlCarrito').text("Productos")
   for(let k =0 ; k<arrayCarrito.length; k++){
     const id = arrayCarrito[k].codigo + arrayCarrito[k].tamanio
     const caja = d.querySelector(".agregarAlCarrito")
@@ -101,15 +98,14 @@ function agregar(nombre, productosJson, tamanio, codigo,stock,precio) {
     nodoP.appendChild(texto)
     caja.appendChild(nodoP)
   }
+  total()
   localStorage.setItem('elCarrito', JSON.stringify(arrayCarrito))// quiero hacer una f(x) que recupere el carrito si se cerro el navegador/ para recuperarlo tengo que hacer JSON.parse(arrayCarrito)
 }
 function existeEnCarrito(productoCodigo, tamanio){
-  //const existe = true
   if(arrayCarrito.length === 0){
     return existe = false
   }else{
     for(let i = 0; i<arrayCarrito.length;i++){
-      //console.log("entro"+ "i:"+ i + " "+ arrayCarrito[i].tamanio + " el tamaño q mando :"+ tamanio + "codigo:"+arrayCarrito[i].codigo+"cod q entra:"+ productoCodigo)
       if((tamanio == arrayCarrito[i].tamanio) && (productoCodigo == arrayCarrito[i].codigo)){
         arrayCarrito[i].cantidad+=1
         existe = true
@@ -123,28 +119,27 @@ function existeEnCarrito(productoCodigo, tamanio){
 }
 
 function total(){
-  let total = 0
+  let totalP = 0
   for(let i = 0;i<arrayCarrito.length;i++){
-    total+= arrayCarrito[i].precio
+    totalP+= arrayCarrito[i].precio
   }
-  return total
+      const nodo = d.querySelector(".agregarAlCarrito"),
+            total= d.createElement("p"),
+            texto = d.createTextNode(`Su Total : ${totalP}`)
+      total.appendChild(texto)
+      nodo.appendChild(total)
 }
 
-function eliminarCarrito(){//no anda
-  //
- let caja = $('#agregarAlCarrito')
-  console.log(caja)
-  
+function eliminarCarrito(){
+ const caja = $('.agregarAlCarrito')
     while (caja.firstChild){
       console.log(caja.firstChild)
           caja.removeChild(caja.firstChild);
           console.log(caja.firstChild)
       }
-
-  // for(let i = 0;i<arrayCarrito.length;i++){
-  //   //caja.removeChild(caja.firstChild)
-  //   console.log(arrayCarrito[i])}
+      $('.agregarAlCarrito').text("Productos")
   arrayCarrito.length=0
+  //arrayCarrito = [] no se porque no funciona
   
   localStorage.clear()
 }
@@ -153,7 +148,6 @@ function darkMode(e, btn, classDark){
       selectores = d.querySelectorAll("[data-dark]")
   let luna="🌙",
       sol="☀️"
-  //d.addEventListener("click", (e)=>{
       if(e.target.matches(btn)){
           if(themeBtn.textContent === luna){
               selectores.forEach(el=> el.classList.add(classDark))
@@ -165,43 +159,8 @@ function darkMode(e, btn, classDark){
               localStorage.setItem('dark-mode', JSON.stringify(sol))
           }
       }
-  //})
+ 
 
 }
 
-function mostrarCarrito(btn){
-  const btnSelect = d.querySelector(btn)
 
-  d.addEventListener("click", (e)=>{
-    if(e.target.matches(btnSelect.value)){
-      Swal.fire({
-        position: 'top-end',
-        title: 'Su Carrito',
-        showConfirmButton: true,
-        showDenyButton: true,
-        denyButtonText: `Eliminar`,
-        keydownListenerCapture: true,
-        text: `Su saldo es ${total()}`
-      }).then((result) => {
-        /* Read more about isConfirmed, isDenied below */
-        if (result.isConfirmed) {
-          //tengo q mandarlo a mercadopago
-        } else if (result.isDenied) {
-          Swal.fire('Carrito Vacio')
-          arrayCarrito = []
-        }
-       })
-    }
-  })
-}
-
-function imprimirElArray(){
-  arrayCarrito.forEach(function(i) {
-   return `${i.cantidad} ${i.nombre} $ ${i.precio*i.cantidad}`
-   // i.insertAdjacentHTML(
-   //   "afterend",
-   //   `${i.cantidad} ${i.nombre} $ ${i.precio*i.cantidad}`
-   // );
- });
- // arrayCarrito.forEach(i=> console.log(i.cantidad + " "+ i.nombre + " $"+ i.precio*i.cantidad))
-}

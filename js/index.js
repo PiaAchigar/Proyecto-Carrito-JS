@@ -14,12 +14,9 @@ $(document).ready(function(){
         const prod = d.getElementById(el.currentTarget.value)
         res.productosJson.forEach((obj)=>{
           if(obj.nombre == el.currentTarget.value){
-            //console.log("entro "+obj.nombre)
             for(let i = 0;i<obj.presentacion.length;i++){
               if(obj.presentacion[i].tamanio == prod.value){
-                  $("#exampleModal").slideToggle(1200,function(){
                     agregar(el.currentTarget.value,res.productosJson,prod.value,obj.presentacion[i].codigo,obj.presentacion[i].stock,obj.presentacion[i].precio)
-                  })
               }
             }
           }
@@ -36,17 +33,13 @@ $(document).ready(function(){
       console.log(xhr), console.log(status), console.log(error), console.log(productosJson[0])
    })
 })
-
 $('.dark-mode-btn').click(function(e){
   darkMode(e,".dark-mode-btn", "dark-mode")
 })
 $("#carrito-toggle").click(function() {
     $("#exampleModal").slideToggle(1500,function(){
-  })
 })
-
-$('#eliminar').click(eliminarCarrito)
-
+})
 $("#comprar").click(function() {
     Swal.fire({
       position: 'top-end',
@@ -56,14 +49,11 @@ $("#comprar").click(function() {
       timer: 2000,
       keydownListenerCapture: true
     })
-    arrayCarrito=[]
-    // $.ajax({
-    //   url: ""
-    //   type: "GET",
-    //   dataType: "json"
-    // })
+    arrayCarrito.length = 0
+    $('.agregarAlCarrito').text("No hay Productos seleccionados")
  })
  $("#eliminar").click(function() {
+  eliminarCarrito()
   Swal.fire({
     position: 'top-end',
     icon: 'success',
@@ -72,7 +62,8 @@ $("#comprar").click(function() {
     timer: 2000,
     keydownListenerCapture: true
   })
-  arrayCarrito = []
+  arrayCarrito.length = 0
+    $('.agregarAlCarrito').text("Seleccione sus Productos")
   })
 
   window.onscroll = function () { myFunction() };
@@ -93,7 +84,6 @@ $("#comprar").click(function() {
   }
 
 //--------- Lista de Tareas -----
-// - Agregar  nodo https://sweetalert2.github.io/
 // - Base de Datos de Clientes, Login
 // - Agregar metodos de pago
 // ver Curso JavaScript: 101. DOM: Ejercicios Prácticos | Validación de Formularios con HTML5
