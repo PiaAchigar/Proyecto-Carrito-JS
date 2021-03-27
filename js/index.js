@@ -37,85 +37,15 @@ $(document).ready(function(){
    })
 })
 
-  $('.dark-mode-btn').click(function(e){
-    darkMode(e,".dark-mode-btn", "dark-mode")
+$('.dark-mode-btn').click(function(e){
+  darkMode(e,".dark-mode-btn", "dark-mode")
+})
+$("#carrito-toggle").click(function() {
+    $("#exampleModal").slideToggle(1500,function(){
   })
-    //scrollTopButton (".scroll-top-btn")
-    
-    
-
-//https://es.stackoverflow.com/questions/365787/agregar-resultado-a-lista-con-append -------------------------------------------------------
-//https://es.stackoverflow.com/questions/313093/datatable-en-sweetalert2
-    //mostrarCarrito("#carrito-toggle")
-    $("#carrito-toggle").click(function() {
-      $("#exampleModal").slideToggle(1500,function(){
-      })
-      })
-      //$("#exampleModal").slideToggle(2000)
-      // const pr = "Soy Variable"
-      // Swal.fire({
-      //   position: 'top-end',
-      //   title: 'Su Carrito',
-      //   width: 500, //box-sizing: border-box
-      //   showConfirmButton: true,
-      //   showDenyButton: true,
-      //   denyButtonText: `Eliminar`,
-      //   keydownListenerCapture: true,
-      //   text:`${imprimirElArray()}`,
-      //   text: `Su saldo es ${total()}`,
-      //   iconHtml:`<div id= "swal"></div>`,
-      // },
-      // function(){
-      //   //Swal.getInput(imprimirElArray())
-      // }
-      // ).then((result) => {
-      //   /* Read more about isConfirmed, isDenied below */
-      //   if (result.isConfirmed) {
-      //     //tengo q mandarlo a mercadopago
-      //   } else if (result.isDenied) {
-      //     Swal.fire('Carrito Vacio')
-      //     arrayCarrito = []
-      //   }
-      // })
-   
-$("#swal").click(function(){
-  imprimirElArray()
 })
 
-   //Swal.getInput (imprimirElArray())
 $('#eliminar').click(eliminarCarrito)
-
-
-// $("#carrito-toggle").click(function() {// todo: mirar en la docu swal como agrego un nodo
-//     //$("#exampleModal").slideToggle(2000)
-//     Swal.fire({
-//       position: 'top-end',
-//       title: 'Su Carrito',
-//       showConfirmButton: true,
-//       showDenyButton: true,
-//       denyButtonText: `Eliminar`,
-//       keydownListenerCapture: true,
-//       text: `Su saldo es ${total()}`
-//     }).then((result) => {
-//       /* Read more about isConfirmed, isDenied below */
-//       if (result.isConfirmed) {
-//         //tengo q mandarlo a mercadopago
-//       } else if (result.isDenied) {
-//         Swal.fire('Carrito Vacio')
-//         arrayCarrito = []
-//       }
-//     })
-//  })
- function imprimirElArray(){
-   arrayCarrito.forEach(function(i) {
-    return `${i.cantidad} ${i.nombre} $ ${i.precio*i.cantidad}`
-    // i.insertAdjacentHTML(
-    //   "afterend",
-    //   `${i.cantidad} ${i.nombre} $ ${i.precio*i.cantidad}`
-    // );
-  });
-  // arrayCarrito.forEach(i=> console.log(i.cantidad + " "+ i.nombre + " $"+ i.precio*i.cantidad))
- }
 
 $("#comprar").click(function() {
     Swal.fire({

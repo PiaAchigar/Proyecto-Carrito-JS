@@ -148,9 +148,11 @@ function darkMode(e, btn, classDark){
           if(themeBtn.textContent === luna){
               selectores.forEach(el=> el.classList.add(classDark))
               themeBtn.textContent = sol
+              localStorage.setItem('dark-mode', JSON.stringify(luna))
           }else{
               selectores.forEach(el=> el.classList.remove(classDark))
               themeBtn.textContent = luna
+              localStorage.setItem('dark-mode', JSON.stringify(sol))
           }
       }
   //})
@@ -181,4 +183,15 @@ function mostrarCarrito(btn){
        })
     }
   })
+}
+
+function imprimirElArray(){
+  arrayCarrito.forEach(function(i) {
+   return `${i.cantidad} ${i.nombre} $ ${i.precio*i.cantidad}`
+   // i.insertAdjacentHTML(
+   //   "afterend",
+   //   `${i.cantidad} ${i.nombre} $ ${i.precio*i.cantidad}`
+   // );
+ });
+ // arrayCarrito.forEach(i=> console.log(i.cantidad + " "+ i.nombre + " $"+ i.precio*i.cantidad))
 }
