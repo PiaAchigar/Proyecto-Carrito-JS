@@ -1,5 +1,9 @@
-const arrayCarrito = []
+let arrayCarrito = []
 const arrayJson = []
+if(localStorage.getItem('elCarrito')!== null){
+  arrayCarrito = JSON.parse(localStorage.getItem('elCarrito'))
+   // no supe mostrarlo en el btn del carrito
+}
 
 $(document).ready(function(){ 
   $.ajax({

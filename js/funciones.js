@@ -142,6 +142,7 @@ function eliminarCarrito(){
   //arrayCarrito = [] no se porque no funciona
   
   localStorage.clear()
+  //localStorage.setItem('elCarrito', JSON.stringify(arrayCarrito))
 }
 function darkMode(e, btn, classDark){
   const themeBtn = d.querySelector(btn),
